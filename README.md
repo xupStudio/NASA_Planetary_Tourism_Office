@@ -2,6 +2,5 @@
 
 - Planet information
 
-- Planet
+- Planet plan
 
-- Planet-Link-Catalog
