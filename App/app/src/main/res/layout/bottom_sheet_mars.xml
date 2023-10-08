@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="12dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:textSize="24dp"
+                android:text="The Mars"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/iv_mars"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@mipmap/mars"
+                app:layout_constraintTop_toTopOf="@+id/tv_title"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <TextView
+                android:id="@+id/tv_formation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="20dp"
+                android:text="Formation"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_formation_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/iv_mars"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="20dp"
+                android:text="Mars is the fourth planet from the Sun in our solar system. Scientists believe that all of the planets were created just over 4.5 billion years ago. The solar system began as a large cloud of gas, dust, and ice, which collapsed into a spinning disc. The Sun was formed at its centre and particles began sticking together along rings in the disc – leading to the formation of the planets."
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_orbit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_formation_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="20dp"
+                android:text="Orbit and rotation"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_orbit_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orbit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="18dp"
+                android:text="A year on Mars – the time it takes for the planet to orbit the Sun – is nearly twice as long as a year on Earth. However, the planets rotate at a similar frequency: a day on Mars (known as a sol) lasts about 24 hours and 40 minutes in Earth time.\n\nMars is tilted by about 25 degrees, which means that the red planet has four seasons, too – each twice as long as Earth's!"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_surface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_orbit_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Surface"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_surface_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_surface"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="20dp"
+                android:text="Mars is known as the red planet due to its reddish hue caused by oxidized iron (or rust) on the planet's surface.\n\nThe tallest mountain in the entire solar system, Olympus Mons, is on Mars. This extinct volcano is nearly 22 km tall – roughly two and a half times the height of Mount Everest.\n\nValles Marineris is a massive canyon system that stretches over 3,000 km across Mars's surface – about the distance between Montreal and Calgary! Plunging about 8 km deep, and often referred to as the Grand Canyon of Mars, Valles Marineris makes the red planet home to the largest known canyon in the solar system."
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="15dp"
+                android:textColor="@android:color/black" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
