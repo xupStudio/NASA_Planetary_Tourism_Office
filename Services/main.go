@@ -1,7 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/nasa/planetary_tourism/routes"
+)
 
 func main() {
-	fmt.Print(123)
+	var err error
+
+	// init env - orm
+	// _ = api.InitOrm()
+
+	// init env - route
+	app := routes.Init()
+
+	if err = app.Listen(":9999"); err != nil {
+		log.Fatalf("launched error : %s ", err)
+	}
+
 }
